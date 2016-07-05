@@ -8,8 +8,6 @@ block content
 					h1.text-center.login-title Welcome #{user.firstName}. Check your details below:
 						div.signup-wall
 							ul.user-details
-								li Username ---> #{user.username}
-								li Email    ---> #{user.email}
-								li First Name ---> #{user.firstName} 
-								li Last Name ---> #{user.lastName}
+								li Witaj #{user.firstName} #{user.lastName}
+						a(href='/home/sender', class='text-center new-account') Sender
 						a(href='/signout', class='text-center new-account') Sign Out

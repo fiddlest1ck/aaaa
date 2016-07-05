@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
+var dbConfig = require('../db');
+var File = require('../models/sender');
+var User = require('../models/user');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './uploads/')
@@ -10,91 +13,93 @@ var storage = multer.diskStorage({
     }
 });
 var upload = multer({
-  storage: storage, 
+  	storage: storage, 
 })
+
+
 
 var isAuthenticated = function (req, res, next) {
-	// if user is authenticated in the session, call the next() to call the next request handler 
-	// Passport adds this method to request object. A middleware is allowed to add properties to
-	// request and response objects
 	if (req.isAuthenticated())
 		return next();
-	// if the user is not authenticated then redirect him to the login page
 	res.redirect('/');
 }
+
 module.exports = function(passport){
 
-
-router.get('/', isAuthenticated, function(req, res) {
-	res.render('index.ejs');
-});
-
-router.get('/dashboard', isAuthenticated, function(req, res) {
-	res.render('dashboard.ejs');
-});
-
-router.get('/dashboard/sender', isAuthenticated, function(req, res) {
-	File.
-	res.render('sender.ejs');
-
-});
-
-router.post('/dashboard/sender', upload.any(), function(req, res, next){	
-	var filer = new File({
-		filename: req.files[0].originalname,
-		user: req.body.user,
-		path: req.files[0].path
+	/* GET login page. */
+	router.get('/', function(req, res) {
+    	// Display the Login page with any flash message, if any
+		res.render('index', { message: req.flash('message') });
 	});
 
-	filer.save(function(err) {
-		if (err) throw err;
-
-		console.log('Information saved');
-		
-	});
-	res.status(204).end();
-});
-
-router.get('/dashboard/reply', isAuthenticated, function(req, res) {
-
-	res.render('reply.ejs');
-})
-
-router.get('/dashboard/openbox', isAuthenticated, function(req, res) {
-	res.render('openbox.ejs');
-})
-
-router.get('/login', function(req, res) {
-	res.render('login.jade');
-})
-
-router.post('/login', passport.authenticate('login', {
+	/* Handle Login POST */
+	router.post('/login', passport.authenticate('login', {
 		successRedirect: '/home',
 		failureRedirect: '/',
 		failureFlash : true  
 	}));
 
-
-router.get('/register', function(req, res) {
-	res.render('register.ejs');
-});
-
-router.post('/register', function(req, res) {
-
-	var person = new User({
-		name: req.body.name,
-		password: req.body.password,
-		admin: true
+	/* GET Registration Page */
+	router.get('/signup', function(req, res){
+		res.render('register',{message: req.flash('message')});
 	});
 
-	person.save(function(err) {
-		if (err) throw err;
+	/* Handle Registration POST */
+	router.post('/signup', passport.authenticate('signup', {
+		successRedirect: '/home',
+		failureRedirect: '/signup',
+		failureFlash : true  
+	}));
 
-		console.log('User saved successfully!');
-		res.json({ success: true});
+	router.get('/home/sender',isAuthenticated, function(req, res) {
+		User.find({}, function(err, users){
+        if(err) return console.err(err);
+        res.render('sender', { users: users });
+    });
+	});
+	
+	router.post('/home/sender', upload.any(), function(req, res, next) {
+    
+		var filer = new File({
+			filename: req.files[0].originalname,
+			user: req.body.user,
+			path: req.files[0].path
+		});	
+
+		filer.save(function(err) {
+			if (err) throw err;
+
+			
+			
+			});
+		
+		res.status(204).end();
+		res.redirect('/home/sender');
+	});
+	
+	router.get('/home/openbox', isAuthenticated, function(req, res) {
+		File.find({ 'user':req.user.firstName }, function(err, files) {
+			console.log(files);
+			res.render('openbox', {files: files});
+		});	
 	});
 
-});
+
+	/* GET Home Page */
+	router.get('/home', isAuthenticated, function(req, res){
+		res.render('home', { user: req.user });
+	});
+
+	/* Handle Logout */
+	router.get('/signout', function(req, res) {
+		req.logout();
+		res.redirect('/');
+	});
 
 	return router;
 }
+
+
+
+
+

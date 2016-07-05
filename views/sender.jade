@@ -1,0 +1,12 @@
+
+div.block
+	form(method='POST' action='/home/sender' enctype="multipart/form-data")
+		input(type='file' name='file' required)
+		input(type='submit')
+		ul.user-details
+			h2 Userzy
+			each user in users
+				input(type='radio', name='user', value='#{user.username}' required) 
+				p #{user.lastName} #{user.firstName}
+		
+	
