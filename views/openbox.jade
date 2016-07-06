@@ -1,3 +1,5 @@
+extends layout
+
 block content
 	div.container
 		div.row
@@ -7,5 +9,11 @@ block content
 						div.signup-wall
 							ul.user-details
 							each file in files
-								input(type='radio', name='user', value='#{file}')
+								input(type='radio', name='filer', value='#{file._id}')
 								p #{file.filename}
+								a.delete(href="/home/openbox/delete/" + file._id)="Delete Offer"
+				//- form(enctype="multipart/form-data" action='/home/openbox/delete' method='DELETE')
+				//- 	button(type='submit' text='przeslij') przeslij
+				//- 	button(type='submit' name='delete') usun
+				//- 	button(type='submit' text='odpowiedz') odpowiedz
+				//- 	button(type='submit') otworz

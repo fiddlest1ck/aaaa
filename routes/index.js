@@ -1,21 +1,21 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
 var multer = require('multer');
 var dbConfig = require('../db');
 var File = require('../models/sender');
 var User = require('../models/user');
+var Text = require('../models/text');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './uploads/')
     },
     filename: function (req, file, cb) {
-        cb(null, file.originalname+ '-' + Date.now()+'.jpg')
-    }
+        cb(null, file.originalname)}
 });
 var upload = multer({
   	storage: storage, 
 })
-
 
 
 var isAuthenticated = function (req, res, next) {
@@ -58,28 +58,47 @@ module.exports = function(passport){
     });
 	});
 	
-	router.post('/home/sender', upload.any(), function(req, res, next) {
-    
+	router.post('/home/sender/file', upload.any(), function(req, res, next) {
+		console.log(res);
 		var filer = new File({
 			filename: req.files[0].originalname,
 			user: req.body.user,
-			path: req.files[0].path
-		});	
-
+			path: req.files[0].path,
+		});
 		filer.save(function(err) {
 			if (err) throw err;
-
-			
-			
-			});
+		});
 		
 		res.status(204).end();
 		res.redirect('/home/sender');
 	});
+
+	router.get('/home/openbox/reply', isAuthenticated, function(req,res) {
+		User.find({}, function(err, users){
+        if(err) return console.err(err);
+        res.render('render', { users: users });
+    });
+	});
 	
+	router.get('/home/openbox/delete/:id', isAuthenticated, function(req, res) {
+		File.findOneAndRemove({_id : new mongoose.mongo.ObjectID(req.params.id)}, function (err, files){
+        res.redirect('/home/openbox');
+	});
+	});
+
+	// router.post('/home/openbox/reply', function(req, res) {
+	// 	var text = new Text({
+	// 		subject: req.body.subject,
+	// 		text: req.body.text,
+	// 		user: req.body.user
+	// 	});
+
+	// });
+
+	// router.get('/home/openbox/:id')
+
 	router.get('/home/openbox', isAuthenticated, function(req, res) {
 		File.find({ 'user':req.user.firstName }, function(err, files) {
-			console.log(files);
 			res.render('openbox', {files: files});
 		});	
 	});
