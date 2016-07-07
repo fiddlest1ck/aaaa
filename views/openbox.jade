@@ -11,7 +11,9 @@ block content
 							each file in files
 								input(type='radio', name='filer', value='#{file._id}')
 								p #{file.filename}
-								a.delete(href="/home/openbox/delete/" + file._id)="Delete Offer"
+								a.delete(href="/home/openbox/delete/" + file._id)="Delete"
+									
+
 				//- form(enctype="multipart/form-data" action='/home/openbox/delete' method='DELETE')
 				//- 	button(type='submit' text='przeslij') przeslij
 				//- 	button(type='submit' name='delete') usun

@@ -59,24 +59,39 @@ module.exports = function(passport){
 	});
 	
 	router.post('/home/sender/file', upload.any(), function(req, res, next) {
-		console.log(res);
+		
 		var filer = new File({
 			filename: req.files[0].originalname,
 			user: req.body.user,
 			path: req.files[0].path,
+			type: req.files[0].mimetype
 		});
 		filer.save(function(err) {
 			if (err) throw err;
 		});
-		
 		res.status(204).end();
 		res.redirect('/home/sender');
 	});
 
+
+	router.post('/home/openbox/reply', function(req, res) {
+		var file = new File({
+			filename: req.body.name,
+			text: req.body.text,
+			user: req.body.user,
+			type: 'text'
+		});
+		file.save(function(err) {
+			if (err) throw err;
+		});
+		res.status(204).end();
+		res.redirect('/home/openbox')
+	})
 	router.get('/home/openbox/reply', isAuthenticated, function(req,res) {
+		
 		User.find({}, function(err, users){
         if(err) return console.err(err);
-        res.render('render', { users: users });
+        res.render('reply', { users: users });
     });
 	});
 	
@@ -85,6 +100,7 @@ module.exports = function(passport){
         res.redirect('/home/openbox');
 	});
 	});
+
 
 	// router.post('/home/openbox/reply', function(req, res) {
 	// 	var text = new Text({
@@ -98,11 +114,17 @@ module.exports = function(passport){
 	// router.get('/home/openbox/:id')
 
 	router.get('/home/openbox', isAuthenticated, function(req, res) {
-		File.find({ 'user':req.user.firstName }, function(err, files) {
-			res.render('openbox', {files: files});
+		File.find({'user':req.user.firstName }, function(err, files) {
+			res.render('openbox', {files:files})	
 		});	
 	});
 
+	router.get('/home/openbox/:id', isAuthenticated, function(req, res) {
+		File.findOne({_id:new mongoose.mongo.ObjectID(req.params.id)}, function (err, file){
+			res.render('pagerev', {file: file});
+		})
+	})
+	
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){

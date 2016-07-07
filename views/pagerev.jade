@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				#user
+					h1.text-center.login-title 
+						div.signup-wall
+							input(type='text' value='#{file.filename}')
+							input(type='text' value='#{file.text}')
