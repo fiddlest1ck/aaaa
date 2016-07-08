@@ -7,5 +7,17 @@ block content
 				#user
 					h1.text-center.login-title 
 						div.signup-wall
-							input(type='text' value='#{file.filename}')
-							input(type='text' value='#{file.text}')
+							
+							- if(typeof(locals.file.text) == 'undefined') {
+							p= 'Filename:' + locals.file.filename
+					a(type='button' href='/home/openbox/reply/') reply 
+					a(href='/home/openbox/download/' + file.filename) download			
+							- }
+							- else {
+							p= 'Subject:' + locals.file.filename
+							p= locals.file.text 
+					a(type='button' href='/home/openbox/reply/') reply
+					a(href='/home/openbox/download/' + file.filename) download			
+							-}
+							
+					

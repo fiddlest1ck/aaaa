@@ -87,18 +87,31 @@ module.exports = function(passport){
 		res.status(204).end();
 		res.redirect('/home/openbox')
 	})
-	router.get('/home/openbox/reply', isAuthenticated, function(req,res) {
-		
-		User.find({}, function(err, users){
-        if(err) return console.err(err);
-        res.render('reply', { users: users });
-    });
+	router.get('/home/openbox/reply/', isAuthenticated, function(req,res) {
+			User.find({}, function(err, users){
+        	if(err) return console.err(err);
+        	res.render('reply', { users: users});
+    });	
 	});
+	
 	
 	router.get('/home/openbox/delete/:id', isAuthenticated, function(req, res) {
 		File.findOneAndRemove({_id : new mongoose.mongo.ObjectID(req.params.id)}, function (err, files){
         res.redirect('/home/openbox');
 	});
+	});
+
+	router.get('/home/openbox/send/', isAuthenticated, function(req, res) {
+		File.findOneAndUpdate({_id : new mongoose.mongo.ObjectID(req.body.filer)}, function (err, files) {
+
+		})
+	})
+	router.get('/home/openbox/download/:file', isAuthenticated, function(req, res, next) {
+		var file = req.params.file
+		console.log(file)
+     	var path = './uploads/' + file;
+     	console.log(path)
+     	res.download(path)
 	});
 
 
