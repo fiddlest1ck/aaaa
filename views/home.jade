@@ -8,8 +8,15 @@ block content
 					h1.text-center.login-title Welcome #{user.firstName}. Check your details below:
 						div.signup-wall
 							ul.user-details
-								li Witaj #{user.firstName} #{user.lastName}
-						a(href='/home/sender', class='text-center new-account') Sender
-						a(href='/home/openbox' class='text-center new-account') OpenBox
-						a(href='' class='text-center new-account') 
-						a(href='/signout', class='text-center new-account') Sign Out
+								li Witaj #{user.firstName} #{user.lastName}		
+						-if(file != null) {
+							-if(file.viewed == '1') {
+								p= 'Nowa wiadomosc w OPENBOX'
+								-}
+							-}
+						-else {
+							p= 'Brak nowych wiadomości'
+							-}
+
+
+

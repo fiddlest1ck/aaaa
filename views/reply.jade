@@ -5,8 +5,9 @@ block content
 		div.col-sm-6.col-md-4.col-md-offset-4
 			div.singup-wall
 				form(action='/home/openbox/reply/' method='POST')
-					input(type='text' name='name' value='')
+					input(type='text' name='name' value='Od #{member.firstName} #{member.lastName} | ' )
 					textarea(cols='50' rows='4' name='text')
+
 					div
 					each user in users
 						input(type='radio' name='user' value='#{user.username}' required)

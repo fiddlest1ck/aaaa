@@ -1,15 +1,14 @@
 extends layout
 
 block content
-	div.block
 		form(method='POST' action='/home/sender/file' enctype="multipart/form-data")
 			input(type='file' name='file')
-			input(type='text' name='text')
 			input(type='submit')
 			ul.user-details
 				h2 Userzy
 				each user in users
-					input(type='radio', name='user', value='#{user.username}' required) 
-					p #{user.lastName} #{user.firstName}
+					ul
+						li: input(type='radio', name='user', value='#{user.username}' required) 
+						p #{user.lastName} #{user.firstName}
 	
 	

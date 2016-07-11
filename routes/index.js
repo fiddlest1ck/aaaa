@@ -64,7 +64,8 @@ module.exports = function(passport){
 			filename: req.files[0].originalname,
 			user: req.body.user,
 			path: req.files[0].path,
-			type: req.files[0].mimetype
+			type: req.files[0].mimetype,
+			viewed: '1',
 		});
 		filer.save(function(err) {
 			if (err) throw err;
@@ -79,7 +80,8 @@ module.exports = function(passport){
 			filename: req.body.name,
 			text: req.body.text,
 			user: req.body.user,
-			type: 'text'
+			type: 'text',
+			viewed: '1'
 		});
 		file.save(function(err) {
 			if (err) throw err;
@@ -90,7 +92,7 @@ module.exports = function(passport){
 	router.get('/home/openbox/reply/', isAuthenticated, function(req,res) {
 			User.find({}, function(err, users){
         	if(err) return console.err(err);
-        	res.render('reply', { users: users});
+        	res.render('reply', { users: users, member: req.user});
     });	
 	});
 	
@@ -99,6 +101,12 @@ module.exports = function(passport){
 		File.findOneAndRemove({_id : new mongoose.mongo.ObjectID(req.params.id)}, function (err, files){
         res.redirect('/home/openbox');
 	});
+	});
+
+	router.get('/home/openbox/viewed/:id', isAuthenticated, function(req, res) {
+		File.findOneAndUpdate({_id : new mongoose.mongo.ObjectID(req.params.id)}, {'viewed': '0'}, function(err, files) {
+		res.redirect('/home/openbox');	
+		});
 	});
 
 	router.get('/home/openbox/send/', isAuthenticated, function(req, res) {
@@ -134,14 +142,19 @@ module.exports = function(passport){
 
 	router.get('/home/openbox/:id', isAuthenticated, function(req, res) {
 		File.findOne({_id:new mongoose.mongo.ObjectID(req.params.id)}, function (err, file){
+			File.findOneAndUpdate({_id : new mongoose.mongo.ObjectID(req.params.id)}, {'viewed': '0'}, function(err, files) {
 			res.render('pagerev', {file: file});
-		})
-	})
+		});
+	});
+	});
 	
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		res.render('home', { user: req.user });
+		File.findOne({'viewed':'1', 'user':req.user.username }, function(err, file) {
+			console.log(file)
+			res.render('home', { user: req.user, file: file });	
+		}); 
 	});
 
 	/* Handle Logout */

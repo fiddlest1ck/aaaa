@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -100,4 +99,12 @@ li.list{
 }
 li{
     margin:0;
+}
+.navbar {
+    text-align:left;
+}
+.top {
+    background:black;
+    height:100px;
+    text-align:right;
 }

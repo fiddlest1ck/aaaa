@@ -6,7 +6,10 @@ var FileSchema = new Schema({
 	user: { type: String },
 	path: { type: String },
 	text: { type: String },
+	author: { type: String },
 	type: { type: String },
+	viewed: { type: String },
+
 });
 
 module.exports = mongoose.model('File', FileSchema);
