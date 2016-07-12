@@ -9,7 +9,7 @@ block content
 		each file in files
 			div.col-sm-10.lister
 				ul.user-details
-					li.list 
+					li.new-file 
 						a(href='/home/openbox/' + file._id) #{file.filename}
 			div.col-sm-2
 				a.delete(href="/home/openbox/delete/" + file._id)="Delete"

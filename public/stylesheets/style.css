@@ -108,3 +108,8 @@ li{
     height:100px;
     text-align:right;
 }
+.new-file { 
+    font-size:20px;
+    background:#bbb;
+    margin:0;
+ }

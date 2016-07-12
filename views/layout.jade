@@ -4,6 +4,11 @@ html
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+		link(href='/bower_components/fullcalendar.css' rel='stylesheet')
+		script(src='/bower_components/lib/moment.min.js')
+		script(src='/bower_components/lib/jquery.min.js')
+		script(src='/bower_components/fullcalendar.js')
+		script(src='/bower_components/fullcalendar/pl.js')
 	body
 		div.col-md-12.top
 				a(href='/signout') logout
@@ -13,6 +18,7 @@ html
 					h2 Navbar
 					li: a(href='/home/sender') Sender
 					li: a(href='/home/openbox') OpenBox
+					li: a(href='/home/callendar') Callendar
 					li: a(href='/signout') Sign Out
 			div.col-md-6
 				block content 

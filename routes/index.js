@@ -94,7 +94,11 @@ module.exports = function(passport){
         	if(err) return console.err(err);
         	res.render('reply', { users: users, member: req.user});
     });	
-	});
+	}); 
+
+	router.get('/home/callendar', isAuthenticated, function (req,res) {
+		res.render('callendar')
+	})
 	
 	
 	router.get('/home/openbox/delete/:id', isAuthenticated, function(req, res) {
