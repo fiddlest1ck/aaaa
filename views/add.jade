@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	form(method='POST', action='/home/callendar/add')
+		input(type='text', name='title') 
+		input(type='date', name='start')
+		input(type='date', name='end')  
+		input(type='submit')

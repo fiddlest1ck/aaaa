@@ -8,7 +8,7 @@ block content
 				h2 Userzy
 				each user in users
 					ul
-						li: input(type='radio', name='user', value='#{user.username}' required) 
+						li: input(type='checkbox', name='user', value='#{user.username}' ) 
 						p #{user.lastName} #{user.firstName}
 	
 	

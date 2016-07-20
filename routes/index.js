@@ -3,9 +3,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var multer = require('multer');
 var dbConfig = require('../db');
+var utils = require('../utils/events');
 var File = require('../models/sender');
 var User = require('../models/user');
 var Text = require('../models/text');
+var Event = require('../models/event');
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './uploads/')
@@ -13,6 +16,8 @@ var storage = multer.diskStorage({
     filename: function (req, file, cb) {
         cb(null, file.originalname)}
 });
+
+
 var upload = multer({
   	storage: storage, 
 })
@@ -74,6 +79,13 @@ module.exports = function(passport){
 		res.redirect('/home/sender');
 	});
 
+	router.get('/home/customforms', isAuthenticated, function(req, res) {
+		res.render('customforms')
+	});
+
+	router.get('/home/customforms/doc1', isAuthenticated, function(req, res) { 
+		res,render('doc1')
+	});
 
 	router.post('/home/openbox/reply', function(req, res) {
 		var file = new File({
@@ -96,10 +108,30 @@ module.exports = function(passport){
     });	
 	}); 
 
-	router.get('/home/callendar', isAuthenticated, function (req,res) {
-		res.render('callendar')
+	router.get('/home/callendar', isAuthenticated, function(req,res) {
+		Event.find({'user':req.user.username}, function(req, eventData) {
+			console.log(eventData)
+			res.render('callendar', {event: eventData})})
+		});
+	
+	router.get('/home/callendar/add', isAuthenticated, function(req,res) {
+		res.render('add')
 	})
 	
+	router.post('/home/callendar/add', function(req, res) {
+		var event = new Event({
+			title: req.body.title,
+			start: req.body.start,
+			end: req.body.end,
+			user: req.user.username
+		});
+
+		event.save(function(err) {
+			if(err) throw err;
+
+		});
+		res.redirect('/home/callendar')
+	});
 	
 	router.get('/home/openbox/delete/:id', isAuthenticated, function(req, res) {
 		File.findOneAndRemove({_id : new mongoose.mongo.ObjectID(req.params.id)}, function (err, files){
@@ -139,7 +171,8 @@ module.exports = function(passport){
 	// router.get('/home/openbox/:id')
 
 	router.get('/home/openbox', isAuthenticated, function(req, res) {
-		File.find({'user':req.user.firstName }, function(err, files) {
+
+		File.find({'user':{$regex: req.user.firstName}}, function(err, files) {
 			res.render('openbox', {files:files})	
 		});	
 	});
@@ -155,10 +188,11 @@ module.exports = function(passport){
 
 	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		File.findOne({'viewed':'1', 'user':req.user.username }, function(err, file) {
-			console.log(file)
-			res.render('home', { user: req.user, file: file });	
-		}); 
+		Event.find({'end'})
+			File.findOne({'viewed':'1', 'user':req.user.username }, function(err, file) {
+				console.log(file)
+				res.render('home', { user: req.user, file: file });	
+			}); 
 	});
 
 	/* Handle Logout */
