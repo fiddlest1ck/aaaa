@@ -2,7 +2,7 @@ extends layout
 
 block content
 	form(method='POST', action='/home/callendar/add')
-		input(type='text', name='title') 
-		input(type='date', name='start')
-		input(type='date', name='end')  
+		input(type='text', name='title' required) 
+		input(type='date', name='start' required)
+		input(type='date', name='end' required)  
 		input(type='submit')
