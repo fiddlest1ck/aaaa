@@ -64,43 +64,49 @@ module.exports = function(passport){
 	});
 	
 	router.post('/home/sender/file', upload.any(), function(req, res, next) {
-		
-		var filer = new File({
-			filename: req.files[0].originalname,
-			user: req.body.user,
-			path: req.files[0].path,
-			type: req.files[0].mimetype,
-			viewed: '1',
+		var array = req.body.user.toString().split(',')
+		for(var i = 0; i<array.length; i++){
+			var filer = new File({
+				filename: req.files[0].originalname,
+				user: array[i],
+				path: req.files[0].path,
+				type: req.files[0].mimetype,
+				viewed: '1',
+			});
+			filer.save(function(err) {
+				if (err) throw err;
+			});
+			res.status(204).end();
+			res.redirect('/home/sender');
+		}
 		});
-		filer.save(function(err) {
-			if (err) throw err;
-		});
-		res.status(204).end();
-		res.redirect('/home/sender');
-	});
 
 	router.get('/home/customforms', isAuthenticated, function(req, res) {
 		res.render('customforms')
 	});
 
 	router.get('/home/customforms/doc1', isAuthenticated, function(req, res) { 
-		res,render('doc1')
+		res.render('doc1')
 	});
 
 	router.post('/home/openbox/reply', function(req, res) {
-		var file = new File({
-			filename: req.body.name,
-			text: req.body.text,
-			user: req.body.user,
-			type: 'text',
-			viewed: '1'
-		});
-		file.save(function(err) {
-			if (err) throw err;
-		});
+		var array = req.body.user.toString().split(',')
+		for(var i = 0; i<array.length; i++){
+			var file = new File({
+				filename: req.body.name,
+				text: req.body.text,
+				user: req.body.user,
+				type: 'text',
+				viewed: '1'
+			});
+			file.save(function(err) {
+				if (err) throw err;
+			});
 		res.status(204).end();
 		res.redirect('/home/openbox')
-	})
+	};
+	});
+
 	router.get('/home/openbox/reply/', isAuthenticated, function(req,res) {
 			User.find({}, function(err, users){
         	if(err) return console.err(err);
@@ -110,10 +116,9 @@ module.exports = function(passport){
 
 	router.get('/home/callendar', isAuthenticated, function(req,res) {
 		Event.find({'user':req.user.username}, function(req, eventData) {
-			console.log(eventData)
-			res.render('callendar', {event: eventData})})
+			res.render('callendar', {event: eventData,})})
 		});
-	
+
 	router.get('/home/callendar/add', isAuthenticated, function(req,res) {
 		res.render('add')
 	})
@@ -158,18 +163,6 @@ module.exports = function(passport){
      	res.download(path)
 	});
 
-
-	// router.post('/home/openbox/reply', function(req, res) {
-	// 	var text = new Text({
-	// 		subject: req.body.subject,
-	// 		text: req.body.text,
-	// 		user: req.body.user
-	// 	});
-
-	// });
-
-	// router.get('/home/openbox/:id')
-
 	router.get('/home/openbox', isAuthenticated, function(req, res) {
 
 		File.find({'user':{$regex: req.user.firstName}}, function(err, files) {
@@ -185,17 +178,14 @@ module.exports = function(passport){
 	});
 	});
 	
-
-	/* GET Home Page */
 	router.get('/home', isAuthenticated, function(req, res){
-		Event.find({'end'})
-			File.findOne({'viewed':'1', 'user':req.user.username }, function(err, file) {
-				console.log(file)
-				res.render('home', { user: req.user, file: file });	
-			}); 
-	});
 
-	/* Handle Logout */
+			File.findOne({'viewed':'1', 'user':req.user.username }, function(err, file) {
+				res.render('home', { user: req.user, file: file});	
+			}); 
+		});
+
+
 	router.get('/signout', function(req, res) {
 		req.logout();
 		res.redirect('/');
