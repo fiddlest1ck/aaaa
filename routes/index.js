@@ -8,6 +8,8 @@ var File = require('../models/sender');
 var User = require('../models/user');
 var Text = require('../models/text');
 var Event = require('../models/event');
+var fs = require('fs');
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -89,28 +91,50 @@ module.exports = function(passport){
 		res.render('doc1')
 	});
 
-	router.post('/home/openbox/reply', function(req, res) {
+	router.post('/home/openbox/reply', function(req, res, next) {
 		var array = req.body.user.toString().split(',')
 		for(var i = 0; i<array.length; i++){
 			var file = new File({
 				filename: req.body.name,
 				text: req.body.text,
-				user: req.body.user,
+				user: array[i],
 				type: 'text',
 				viewed: '1'
-			});
+			}); 
+			var randomnumber = Math.floor(Math.random() * (99999999 - 1 + 1)) + 99999999;
 			file.save(function(err) {
+				fs.writeFile('./uploads/' + randomnumber + req.body.name, req.body.text, function(err){
+						if (err) throw err;
+					})
 				if (err) throw err;
 			});
+		};
+		if(req.body.file){
+			File.findOneAndUpdate({_id : req.body.file}, {'user': req.body.user, 'viewed': '1'}, function(err, files){
+				console.log(err);
+			});
+			};
+
+		for(var i = 0; i<array.length; i++){
+			var attach = new File({
+				filename: req.files[0].originalname,
+				user: array[i],
+				path: req.files[0].path,
+				type: req.files[0].mimetype,
+				viewed: '1',
+			});
+		};
+		
 		res.status(204).end();
 		res.redirect('/home/openbox')
-	};
 	});
 
 	router.get('/home/openbox/reply/', isAuthenticated, function(req,res) {
 			User.find({}, function(err, users){
-        	if(err) return console.err(err);
-        	res.render('reply', { users: users, member: req.user});
+				File.find({'user':{$regex: req.user.firstName}}, function(err, files){	
+        			if(err) return console.err(err);
+        		res.render('reply', { users: users, member: req.user, files:files});
+        	});
     });	
 	}); 
 
@@ -161,6 +185,10 @@ module.exports = function(passport){
      	var path = './uploads/' + file;
      	console.log(path)
      	res.download(path)
+	});
+
+	router.get('/home/openbox/download/:text', isAuthenticated, function(req, res, next) {
+		var text = req.params.text
 	});
 
 	router.get('/home/openbox', isAuthenticated, function(req, res) {

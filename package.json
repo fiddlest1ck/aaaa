@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "angularjs": "0.0.1",
     "bcrypt-nodejs": "*",
     "body-parser": "~1.0.0",
     "bower": "^1.7.9",

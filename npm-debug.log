@@ -1,0 +1,937 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'pdf-fill-form' ]
+2 info using npm@3.10.2
+3 info using node@v0.10.25
+4 verbose node symlink /usr/bin/node
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData pdf-fill-form
+9 silly fetchNamedPackageData pdf-fill-form
+10 silly mapToRegistry name pdf-fill-form
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data { raw: 'pdf-fill-form',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'pdf-fill-form',
+13 silly mapToRegistry   name: 'pdf-fill-form',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/pdf-fill-form
+15 verbose request uri https://registry.npmjs.org/pdf-fill-form
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 11:23:33
+18 verbose request id b65b7d220e62edde
+19 verbose etag "8Y1Z9V5XE5N3YBU3G1RBQT4OA"
+20 http request GET https://registry.npmjs.org/pdf-fill-form
+21 http 304 https://registry.npmjs.org/pdf-fill-form
+22 verbose headers { date: 'Wed, 27 Jul 2016 09:23:33 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: '"8Y1Z9V5XE5N3YBU3G1RBQT4OA"',
+22 verbose headers   age: '81',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-fra1230-FRA',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '1',
+22 verbose headers   'x-timer': 'S1469611413.759833,VS0,VE0',
+22 verbose headers   vary: 'Accept-Encoding' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Wed, 27 Jul 2016 09:23:33 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: '"8Y1Z9V5XE5N3YBU3G1RBQT4OA"',
+23 silly get     age: '81',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-fra1230-FRA',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1469611413.759833,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose etag https://registry.npmjs.org/pdf-fill-form from cache
+25 verbose get saving pdf-fill-form to /home/maciej/.npm/registry.npmjs.org/pdf-fill-form/.cache.json
+26 verbose correctMkdir /home/maciej/.npm correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule pdf-fill-form@1.1.0 checking installable status
+40 silly cache add args [ 'pdf-fill-form', null ]
+41 verbose cache add spec pdf-fill-form
+42 silly cache add parsed spec { raw: 'pdf-fill-form',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'pdf-fill-form',
+42 silly cache add   name: 'pdf-fill-form',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed pdf-fill-form@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for pdf-fill-form
+45 info addNameTag [ 'pdf-fill-form', 'latest' ]
+46 silly mapToRegistry name pdf-fill-form
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data { raw: 'pdf-fill-form',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'pdf-fill-form',
+49 silly mapToRegistry   name: 'pdf-fill-form',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/pdf-fill-form
+51 verbose addNameTag registry:https://registry.npmjs.org/pdf-fill-form not in flight; fetching
+52 verbose get https://registry.npmjs.org/pdf-fill-form not expired, no request
+53 silly addNameTag next cb for pdf-fill-form with tag latest
+54 silly addNamed pdf-fill-form@1.1.0
+55 verbose addNamed "1.1.0" is a plain semver version for pdf-fill-form
+56 silly cache afterAdd pdf-fill-form@1.1.0
+57 verbose afterAdd /home/maciej/.npm/pdf-fill-form/1.1.0/package/package.json not in flight; writing
+58 verbose correctMkdir /home/maciej/.npm correctMkdir not in flight; initializing
+59 verbose afterAdd /home/maciej/.npm/pdf-fill-form/1.1.0/package/package.json written
+60 silly fetchNamedPackageData nan
+61 silly mapToRegistry name nan
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry data { raw: 'nan',
+64 silly mapToRegistry   scope: null,
+64 silly mapToRegistry   escapedName: 'nan',
+64 silly mapToRegistry   name: 'nan',
+64 silly mapToRegistry   rawSpec: '',
+64 silly mapToRegistry   spec: 'latest',
+64 silly mapToRegistry   type: 'tag' }
+65 silly mapToRegistry uri https://registry.npmjs.org/nan
+66 verbose request uri https://registry.npmjs.org/nan
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 11:23:33
+69 verbose etag "2E1V908MEG33STFNV1760SLVP"
+70 http request GET https://registry.npmjs.org/nan
+71 http 304 https://registry.npmjs.org/nan
+72 verbose headers { date: 'Wed, 27 Jul 2016 09:23:34 GMT',
+72 verbose headers   via: '1.1 varnish',
+72 verbose headers   'cache-control': 'max-age=300',
+72 verbose headers   etag: '"2E1V908MEG33STFNV1760SLVP"',
+72 verbose headers   age: '26',
+72 verbose headers   connection: 'keep-alive',
+72 verbose headers   'x-served-by': 'cache-fra1243-FRA',
+72 verbose headers   'x-cache': 'HIT',
+72 verbose headers   'x-cache-hits': '8',
+72 verbose headers   'x-timer': 'S1469611414.095835,VS0,VE0',
+72 verbose headers   vary: 'Accept-Encoding' }
+73 silly get cb [ 304,
+73 silly get   { date: 'Wed, 27 Jul 2016 09:23:34 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     etag: '"2E1V908MEG33STFNV1760SLVP"',
+73 silly get     age: '26',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-fra1243-FRA',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '8',
+73 silly get     'x-timer': 'S1469611414.095835,VS0,VE0',
+73 silly get     vary: 'Accept-Encoding' } ]
+74 verbose etag https://registry.npmjs.org/nan from cache
+75 verbose get saving nan to /home/maciej/.npm/registry.npmjs.org/nan/.cache.json
+76 verbose correctMkdir /home/maciej/.npm correctMkdir not in flight; initializing
+77 silly resolveWithNewModule nan@1.7.0 checking installable status
+78 silly cache add args [ 'nan@~1.7.0', null ]
+79 verbose cache add spec nan@~1.7.0
+80 silly cache add parsed spec { raw: 'nan@~1.7.0',
+80 silly cache add   scope: null,
+80 silly cache add   escapedName: 'nan',
+80 silly cache add   name: 'nan',
+80 silly cache add   rawSpec: '~1.7.0',
+80 silly cache add   spec: '>=1.7.0 <1.8.0',
+80 silly cache add   type: 'range' }
+81 silly addNamed nan@>=1.7.0 <1.8.0
+82 verbose addNamed ">=1.7.0 <1.8.0" is a valid semver range for nan
+83 silly addNameRange { name: 'nan', range: '>=1.7.0 <1.8.0', hasData: false }
+84 silly mapToRegistry name nan
+85 silly mapToRegistry using default registry
+86 silly mapToRegistry registry https://registry.npmjs.org/
+87 silly mapToRegistry data { raw: 'nan',
+87 silly mapToRegistry   scope: null,
+87 silly mapToRegistry   escapedName: 'nan',
+87 silly mapToRegistry   name: 'nan',
+87 silly mapToRegistry   rawSpec: '',
+87 silly mapToRegistry   spec: 'latest',
+87 silly mapToRegistry   type: 'tag' }
+88 silly mapToRegistry uri https://registry.npmjs.org/nan
+89 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+90 verbose get https://registry.npmjs.org/nan not expired, no request
+91 silly addNameRange number 2 { name: 'nan', range: '>=1.7.0 <1.8.0', hasData: true }
+92 silly addNameRange versions [ 'nan',
+92 silly addNameRange   [ '0.3.0-wip',
+92 silly addNameRange     '0.3.0-wip2',
+92 silly addNameRange     '0.3.0',
+92 silly addNameRange     '0.3.1',
+92 silly addNameRange     '0.3.2',
+92 silly addNameRange     '0.4.0',
+92 silly addNameRange     '0.4.1',
+92 silly addNameRange     '0.4.2',
+92 silly addNameRange     '0.4.3',
+92 silly addNameRange     '0.4.4',
+92 silly addNameRange     '0.5.0',
+92 silly addNameRange     '0.5.1',
+92 silly addNameRange     '0.5.2',
+92 silly addNameRange     '0.6.0',
+92 silly addNameRange     '0.7.0',
+92 silly addNameRange     '0.7.1',
+92 silly addNameRange     '0.8.0',
+92 silly addNameRange     '1.0.0',
+92 silly addNameRange     '1.1.0',
+92 silly addNameRange     '1.1.1',
+92 silly addNameRange     '1.1.2',
+92 silly addNameRange     '1.2.0',
+92 silly addNameRange     '1.3.0',
+92 silly addNameRange     '1.4.0',
+92 silly addNameRange     '1.4.1',
+92 silly addNameRange     '1.5.0',
+92 silly addNameRange     '1.4.2',
+92 silly addNameRange     '1.4.3',
+92 silly addNameRange     '1.5.1',
+92 silly addNameRange     '1.5.2',
+92 silly addNameRange     '1.6.0',
+92 silly addNameRange     '1.5.3',
+92 silly addNameRange     '1.6.1',
+92 silly addNameRange     '1.6.2',
+92 silly addNameRange     '1.7.0',
+92 silly addNameRange     '1.8.0',
+92 silly addNameRange     '1.8.1',
+92 silly addNameRange     '1.8.2',
+92 silly addNameRange     '1.8.3',
+92 silly addNameRange     '1.8.4',
+92 silly addNameRange     '1.9.0',
+92 silly addNameRange     '2.0.0',
+92 silly addNameRange     '2.0.1',
+92 silly addNameRange     '2.0.2',
+92 silly addNameRange     '2.0.3',
+92 silly addNameRange     '2.0.4',
+92 silly addNameRange     '2.0.5',
+92 silly addNameRange     '2.0.6',
+92 silly addNameRange     '2.0.7',
+92 silly addNameRange     '2.0.8',
+92 silly addNameRange     '2.0.9',
+92 silly addNameRange     '2.1.0',
+92 silly addNameRange     '2.2.0',
+92 silly addNameRange     '2.2.1',
+92 silly addNameRange     '2.3.0',
+92 silly addNameRange     '2.3.1',
+92 silly addNameRange     '2.3.2',
+92 silly addNameRange     '2.3.3',
+92 silly addNameRange     '2.3.4',
+92 silly addNameRange     '2.3.5',
+92 silly addNameRange     '2.4.0' ] ]
+93 silly addNamed nan@1.7.0
+94 verbose addNamed "1.7.0" is a plain semver version for nan
+95 silly cache afterAdd nan@1.7.0
+96 verbose afterAdd /home/maciej/.npm/nan/1.7.0/package/package.json not in flight; writing
+97 verbose correctMkdir /home/maciej/.npm correctMkdir not in flight; initializing
+98 verbose afterAdd /home/maciej/.npm/nan/1.7.0/package/package.json written
+99 silly fetchNamedPackageData fsevents
+100 silly mapToRegistry name fsevents
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry data { raw: 'fsevents',
+103 silly mapToRegistry   scope: null,
+103 silly mapToRegistry   escapedName: 'fsevents',
+103 silly mapToRegistry   name: 'fsevents',
+103 silly mapToRegistry   rawSpec: '',
+103 silly mapToRegistry   spec: 'latest',
+103 silly mapToRegistry   type: 'tag' }
+104 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+105 verbose request uri https://registry.npmjs.org/fsevents
+106 verbose request no auth needed
+107 info attempt registry request try #1 at 11:23:34
+108 verbose etag "1IUUBBNAFSLRNOMEHDGNJ1LTJ"
+109 http request GET https://registry.npmjs.org/fsevents
+110 http 304 https://registry.npmjs.org/fsevents
+111 verbose headers { date: 'Wed, 27 Jul 2016 09:23:34 GMT',
+111 verbose headers   via: '1.1 varnish',
+111 verbose headers   'cache-control': 'max-age=300',
+111 verbose headers   etag: '"1IUUBBNAFSLRNOMEHDGNJ1LTJ"',
+111 verbose headers   age: '89',
+111 verbose headers   connection: 'keep-alive',
+111 verbose headers   'x-served-by': 'cache-fra1231-FRA',
+111 verbose headers   'x-cache': 'HIT',
+111 verbose headers   'x-cache-hits': '6',
+111 verbose headers   'x-timer': 'S1469611414.360001,VS0,VE0',
+111 verbose headers   vary: 'Accept-Encoding' }
+112 silly get cb [ 304,
+112 silly get   { date: 'Wed, 27 Jul 2016 09:23:34 GMT',
+112 silly get     via: '1.1 varnish',
+112 silly get     'cache-control': 'max-age=300',
+112 silly get     etag: '"1IUUBBNAFSLRNOMEHDGNJ1LTJ"',
+112 silly get     age: '89',
+112 silly get     connection: 'keep-alive',
+112 silly get     'x-served-by': 'cache-fra1231-FRA',
+112 silly get     'x-cache': 'HIT',
+112 silly get     'x-cache-hits': '6',
+112 silly get     'x-timer': 'S1469611414.360001,VS0,VE0',
+112 silly get     vary: 'Accept-Encoding' } ]
+113 verbose etag https://registry.npmjs.org/fsevents from cache
+114 verbose get saving fsevents to /home/maciej/.npm/registry.npmjs.org/fsevents/.cache.json
+115 verbose correctMkdir /home/maciej/.npm correctMkdir not in flight; initializing
+116 silly resolveWithNewModule fsevents@1.0.14 checking installable status
+117 silly loadAllDepsIntoIdealTree Finishing
+118 silly loadIdealTree Finishing
+119 silly currentTree passport-mongo@0.0.1
+119 silly currentTree ├── abbrev@1.0.9
+119 silly currentTree ├── accepts@1.0.1
+119 silly currentTree ├── amdefine@1.0.0
+119 silly currentTree ├── angularjs@0.0.1
+119 silly currentTree ├── ansi-regex@2.0.0
+119 silly currentTree ├── ansi-styles@2.2.1
+119 silly currentTree ├── anymatch@1.3.0
+119 silly currentTree ├── append-field@0.1.0
+119 silly currentTree ├── arr-diff@2.0.0
+119 silly currentTree ├── arr-flatten@1.0.1
+119 silly currentTree ├── array-unique@0.2.1
+119 silly currentTree ├── arrify@1.0.1
+119 silly currentTree ├── async-each@1.0.0
+119 silly currentTree ├── async@0.2.10
+119 silly currentTree ├── balanced-match@0.4.1
+119 silly currentTree ├── bcrypt-nodejs@0.0.3
+119 silly currentTree ├── binary-extensions@1.5.0
+119 silly currentTree ├── bluebird@2.10.2
+119 silly currentTree ├── body-parser@1.0.2
+119 silly currentTree ├── bootstrap-select@1.10.0
+119 silly currentTree ├── bower@1.7.9
+119 silly currentTree ├── brace-expansion@1.1.5
+119 silly currentTree ├── braces@1.8.5
+119 silly currentTree ├── bson@0.2.22
+119 silly currentTree ├── buffer-crc32@0.2.1
+119 silly currentTree ├── buffer-shims@1.0.0
+119 silly currentTree ├─┬ busboy@0.2.13
+119 silly currentTree │ ├── isarray@0.0.1
+119 silly currentTree │ └── readable-stream@1.1.14
+119 silly currentTree ├── bytes@1.0.0
+119 silly currentTree ├── camelcase@1.2.1
+119 silly currentTree ├── chalk@1.1.3
+119 silly currentTree ├── character-parser@1.2.0
+119 silly currentTree ├─┬ chokidar@1.6.0
+119 silly currentTree │ └── readdirp@2.1.0
+119 silly currentTree ├── commander@2.1.0
+119 silly currentTree ├── concat-map@0.0.1
+119 silly currentTree ├─┬ concat-stream@1.5.1
+119 silly currentTree │ └── readable-stream@2.0.6
+119 silly currentTree ├─┬ configstore@1.4.0
+119 silly currentTree │ ├── mkdirp@0.5.1
+119 silly currentTree │ └── object-assign@4.1.0
+119 silly currentTree ├── connect-flash@0.1.1
+119 silly currentTree ├── constantinople@2.0.1
+119 silly currentTree ├── cookie-parser@1.0.1
+119 silly currentTree ├── cookie-signature@1.0.3
+119 silly currentTree ├── cookie@0.1.0
+119 silly currentTree ├── core-util-is@1.0.2
+119 silly currentTree ├── css-parse@1.0.4
+119 silly currentTree ├── css-stringify@1.0.5
+119 silly currentTree ├── css@1.0.8
+119 silly currentTree ├── debug@0.7.4
+119 silly currentTree ├── decamelize@1.2.0
+119 silly currentTree ├── deep-extend@0.4.1
+119 silly currentTree ├─┬ dicer@0.2.5
+119 silly currentTree │ ├── isarray@0.0.1
+119 silly currentTree │ └── readable-stream@1.1.14
+119 silly currentTree ├── duplexer@0.1.1
+119 silly currentTree ├── duplexify@3.4.3
+119 silly currentTree ├── ee-first@1.1.1
+119 silly currentTree ├── end-of-stream@1.0.0
+119 silly currentTree ├── es6-promise@3.2.1
+119 silly currentTree ├── escape-html@1.0.1
+119 silly currentTree ├── escape-string-regexp@1.0.5
+119 silly currentTree ├── event-stream@3.3.3
+119 silly currentTree ├── expand-brackets@0.1.5
+119 silly currentTree ├── expand-range@1.8.2
+119 silly currentTree ├─┬ express-session@1.0.4
+119 silly currentTree │ ├── cookie@0.1.2
+119 silly currentTree │ └── debug@0.8.1
+119 silly currentTree ├─┬ express@4.2.0
+119 silly currentTree │ ├── cookie@0.1.2
+119 silly currentTree │ └── debug@0.8.1
+119 silly currentTree ├── extglob@0.3.2
+119 silly currentTree ├── filename-regex@2.0.0
+119 silly currentTree ├── fill-range@2.2.3
+119 silly currentTree ├── for-in@0.1.5
+119 silly currentTree ├── for-own@0.1.4
+119 silly currentTree ├── fresh@0.2.2
+119 silly currentTree ├── from@0.1.3
+119 silly currentTree ├── fullcalendar@2.9.0
+119 silly currentTree ├── glob-base@0.3.0
+119 silly currentTree ├── glob-parent@2.0.0
+119 silly currentTree ├── got@3.3.1
+119 silly currentTree ├── graceful-fs@4.1.4
+119 silly currentTree ├── has-ansi@2.0.0
+119 silly currentTree ├── hooks@0.2.1
+119 silly currentTree ├── ignore-by-default@1.0.1
+119 silly currentTree ├── imurmurhash@0.1.4
+119 silly currentTree ├── infinity-agent@2.0.3
+119 silly currentTree ├── inherits@2.0.1
+119 silly currentTree ├── ini@1.3.4
+119 silly currentTree ├── is-binary-path@1.0.1
+119 silly currentTree ├── is-buffer@1.1.3
+119 silly currentTree ├── is-dotfile@1.0.2
+119 silly currentTree ├── is-equal-shallow@0.1.3
+119 silly currentTree ├── is-extendable@0.1.1
+119 silly currentTree ├── is-extglob@1.0.0
+119 silly currentTree ├── is-finite@1.0.1
+119 silly currentTree ├── is-glob@2.0.1
+119 silly currentTree ├── is-npm@1.0.0
+119 silly currentTree ├── is-number@2.1.0
+119 silly currentTree ├── is-posix-bracket@0.1.1
+119 silly currentTree ├── is-primitive@2.0.0
+119 silly currentTree ├── is-promise@1.0.1
+119 silly currentTree ├── is-redirect@1.0.0
+119 silly currentTree ├── is-stream@1.1.0
+119 silly currentTree ├── isarray@1.0.0
+119 silly currentTree ├── isobject@2.1.0
+119 silly currentTree ├── jade@1.3.1
+119 silly currentTree ├── jquery@3.1.0
+119 silly currentTree ├── kerberos@0.0.11
+119 silly currentTree ├── kind-of@3.0.3
+119 silly currentTree ├── latest-version@1.0.1
+119 silly currentTree ├── lodash._baseassign@3.2.0
+119 silly currentTree ├── lodash._basecopy@3.0.1
+119 silly currentTree ├── lodash._bindcallback@3.0.1
+119 silly currentTree ├── lodash._createassigner@3.1.1
+119 silly currentTree ├── lodash._getnative@3.9.1
+119 silly currentTree ├── lodash._isiterateecall@3.0.9
+119 silly currentTree ├── lodash.assign@3.2.0
+119 silly currentTree ├── lodash.defaults@3.1.2
+119 silly currentTree ├── lodash.isarguments@3.0.8
+119 silly currentTree ├── lodash.isarray@3.0.4
+119 silly currentTree ├── lodash.keys@3.1.2
+119 silly currentTree ├── lodash.restparam@3.6.1
+119 silly currentTree ├── lowercase-keys@1.0.0
+119 silly currentTree ├── map-stream@0.1.0
+119 silly currentTree ├── media-typer@0.3.0
+119 silly currentTree ├── merge-descriptors@0.0.2
+119 silly currentTree ├── methods@1.0.0
+119 silly currentTree ├── micromatch@2.3.10
+119 silly currentTree ├── mime-db@1.23.0
+119 silly currentTree ├── mime-types@2.1.11
+119 silly currentTree ├── mime@1.2.11
+119 silly currentTree ├── minimatch@3.0.2
+119 silly currentTree ├── minimist@0.0.8
+119 silly currentTree ├── mkdirp@0.3.5
+119 silly currentTree ├── moment@2.14.1
+119 silly currentTree ├── mongodb@1.4.38
+119 silly currentTree ├── mongoose@3.8.40
+119 silly currentTree ├── monocle@1.1.51
+119 silly currentTree ├─┬ morgan@1.0.1
+119 silly currentTree │ └── bytes@0.3.0
+119 silly currentTree ├── mpath@0.1.1
+119 silly currentTree ├── mpromise@0.4.3
+119 silly currentTree ├─┬ mquery@1.10.0
+119 silly currentTree │ ├── debug@2.2.0
+119 silly currentTree │ └── ms@0.7.1
+119 silly currentTree ├── ms@0.1.0
+119 silly currentTree ├─┬ multer@1.1.0
+119 silly currentTree │ ├── mkdirp@0.5.1
+119 silly currentTree │ └── type-is@1.6.13
+119 silly currentTree ├── muri@1.1.0
+119 silly currentTree ├── nan@1.8.4
+119 silly currentTree ├── negotiator@0.4.9
+119 silly currentTree ├── nested-error-stacks@1.0.2
+119 silly currentTree ├─┬ nodemon@1.9.2
+119 silly currentTree │ ├── debug@2.2.0
+119 silly currentTree │ └── ms@0.7.1
+119 silly currentTree ├── nopt@1.0.10
+119 silly currentTree ├── normalize-path@2.0.1
+119 silly currentTree ├── number-is-nan@1.0.0
+119 silly currentTree ├── object-assign@3.0.0
+119 silly currentTree ├── object.omit@2.0.0
+119 silly currentTree ├── on-finished@2.3.0
+119 silly currentTree ├── once@1.3.3
+119 silly currentTree ├── optimist@0.3.7
+119 silly currentTree ├── os-homedir@1.0.1
+119 silly currentTree ├── os-tmpdir@1.0.1
+119 silly currentTree ├── osenv@0.1.3
+119 silly currentTree ├── package-json@1.2.0
+119 silly currentTree ├── parse-glob@3.0.4
+119 silly currentTree ├── parseurl@1.0.1
+119 silly currentTree ├── passport-local@1.0.0
+119 silly currentTree ├── passport-strategy@1.0.0
+119 silly currentTree ├── passport@0.2.2
+119 silly currentTree ├── path-is-absolute@1.0.0
+119 silly currentTree ├── path-to-regexp@0.1.2
+119 silly currentTree ├── pause-stream@0.0.11
+119 silly currentTree ├── pause@0.0.1
+119 silly currentTree ├── pinkie-promise@2.0.1
+119 silly currentTree ├── pinkie@2.0.4
+119 silly currentTree ├── prepend-http@1.0.4
+119 silly currentTree ├── preserve@0.2.0
+119 silly currentTree ├── process-nextick-args@1.0.7
+119 silly currentTree ├── promise@2.0.0
+119 silly currentTree ├── ps-tree@1.1.0
+119 silly currentTree ├── qs@0.6.6
+119 silly currentTree ├── randomatic@1.1.5
+119 silly currentTree ├── range-parser@1.0.0
+119 silly currentTree ├── raw-body@1.1.7
+119 silly currentTree ├─┬ rc@1.1.6
+119 silly currentTree │ └── minimist@1.2.0
+119 silly currentTree ├── read-all-stream@3.1.0
+119 silly currentTree ├── readable-stream@2.1.4
+119 silly currentTree ├── readdirp@0.2.5
+119 silly currentTree ├── regex-cache@0.4.3
+119 silly currentTree ├── regexp-clone@0.0.1
+119 silly currentTree ├── registry-url@3.1.0
+119 silly currentTree ├── repeat-element@1.1.2
+119 silly currentTree ├── repeat-string@1.5.4
+119 silly currentTree ├── repeating@1.1.3
+119 silly currentTree ├── semver-diff@2.1.0
+119 silly currentTree ├── semver@5.2.0
+119 silly currentTree ├─┬ send@0.3.0
+119 silly currentTree │ └── debug@0.8.0
+119 silly currentTree ├── serve-static@1.1.0
+119 silly currentTree ├── set-immediate-shim@1.0.1
+119 silly currentTree ├── sliced@0.0.5
+119 silly currentTree ├── slide@1.1.6
+119 silly currentTree ├── source-map@0.1.34
+119 silly currentTree ├── split@0.3.3
+119 silly currentTree ├── static-favicon@1.0.2
+119 silly currentTree ├── stream-combiner@0.0.4
+119 silly currentTree ├── streamsearch@0.1.2
+119 silly currentTree ├── string-length@1.0.1
+119 silly currentTree ├── string_decoder@0.10.31
+119 silly currentTree ├── strip-ansi@3.0.1
+119 silly currentTree ├── strip-json-comments@1.0.4
+119 silly currentTree ├── supports-color@2.0.0
+119 silly currentTree ├── through@2.3.8
+119 silly currentTree ├── timed-out@2.0.0
+119 silly currentTree ├── touch@1.0.0
+119 silly currentTree ├─┬ transformers@2.1.0
+119 silly currentTree │ └── uglify-js@2.2.5
+119 silly currentTree ├── type-is@1.1.0
+119 silly currentTree ├── typedarray@0.0.6
+119 silly currentTree ├── uglify-js@2.4.24
+119 silly currentTree ├── uglify-to-browserify@1.0.2
+119 silly currentTree ├── uid2@0.0.3
+119 silly currentTree ├── undefsafe@0.0.3
+119 silly currentTree ├── update-notifier@0.5.0
+119 silly currentTree ├── util-deprecate@1.0.2
+119 silly currentTree ├── utils-merge@1.0.0
+119 silly currentTree ├── uuid@2.0.2
+119 silly currentTree ├── window-size@0.1.0
+119 silly currentTree ├── with@3.0.1
+119 silly currentTree ├── wordwrap@0.0.2
+119 silly currentTree ├── wrappy@1.0.2
+119 silly currentTree ├── write-file-atomic@1.1.4
+119 silly currentTree ├── xdg-basedir@2.0.0
+119 silly currentTree ├── xtend@4.0.1
+119 silly currentTree └── yargs@3.5.4
+120 silly idealTree passport-mongo@0.0.1
+120 silly idealTree ├── abbrev@1.0.9
+120 silly idealTree ├── accepts@1.0.1
+120 silly idealTree ├── amdefine@1.0.0
+120 silly idealTree ├── angularjs@0.0.1
+120 silly idealTree ├── ansi-regex@2.0.0
+120 silly idealTree ├── ansi-styles@2.2.1
+120 silly idealTree ├── anymatch@1.3.0
+120 silly idealTree ├── append-field@0.1.0
+120 silly idealTree ├── arr-diff@2.0.0
+120 silly idealTree ├── arr-flatten@1.0.1
+120 silly idealTree ├── array-unique@0.2.1
+120 silly idealTree ├── arrify@1.0.1
+120 silly idealTree ├── async-each@1.0.0
+120 silly idealTree ├── async@0.2.10
+120 silly idealTree ├── balanced-match@0.4.1
+120 silly idealTree ├── bcrypt-nodejs@0.0.3
+120 silly idealTree ├── binary-extensions@1.5.0
+120 silly idealTree ├── bluebird@2.10.2
+120 silly idealTree ├── body-parser@1.0.2
+120 silly idealTree ├── bootstrap-select@1.10.0
+120 silly idealTree ├── bower@1.7.9
+120 silly idealTree ├── brace-expansion@1.1.5
+120 silly idealTree ├── braces@1.8.5
+120 silly idealTree ├── bson@0.2.22
+120 silly idealTree ├── buffer-crc32@0.2.1
+120 silly idealTree ├── buffer-shims@1.0.0
+120 silly idealTree ├─┬ busboy@0.2.13
+120 silly idealTree │ ├── isarray@0.0.1
+120 silly idealTree │ └── readable-stream@1.1.14
+120 silly idealTree ├── bytes@1.0.0
+120 silly idealTree ├── camelcase@1.2.1
+120 silly idealTree ├── chalk@1.1.3
+120 silly idealTree ├── character-parser@1.2.0
+120 silly idealTree ├─┬ chokidar@1.6.0
+120 silly idealTree │ └── readdirp@2.1.0
+120 silly idealTree ├── commander@2.1.0
+120 silly idealTree ├── concat-map@0.0.1
+120 silly idealTree ├─┬ concat-stream@1.5.1
+120 silly idealTree │ └── readable-stream@2.0.6
+120 silly idealTree ├─┬ configstore@1.4.0
+120 silly idealTree │ ├── mkdirp@0.5.1
+120 silly idealTree │ └── object-assign@4.1.0
+120 silly idealTree ├── connect-flash@0.1.1
+120 silly idealTree ├── constantinople@2.0.1
+120 silly idealTree ├── cookie-parser@1.0.1
+120 silly idealTree ├── cookie-signature@1.0.3
+120 silly idealTree ├── cookie@0.1.0
+120 silly idealTree ├── core-util-is@1.0.2
+120 silly idealTree ├── css-parse@1.0.4
+120 silly idealTree ├── css-stringify@1.0.5
+120 silly idealTree ├── css@1.0.8
+120 silly idealTree ├── debug@0.7.4
+120 silly idealTree ├── decamelize@1.2.0
+120 silly idealTree ├── deep-extend@0.4.1
+120 silly idealTree ├─┬ dicer@0.2.5
+120 silly idealTree │ ├── isarray@0.0.1
+120 silly idealTree │ └── readable-stream@1.1.14
+120 silly idealTree ├── duplexer@0.1.1
+120 silly idealTree ├── duplexify@3.4.3
+120 silly idealTree ├── ee-first@1.1.1
+120 silly idealTree ├── end-of-stream@1.0.0
+120 silly idealTree ├── es6-promise@3.2.1
+120 silly idealTree ├── escape-html@1.0.1
+120 silly idealTree ├── escape-string-regexp@1.0.5
+120 silly idealTree ├── event-stream@3.3.3
+120 silly idealTree ├── expand-brackets@0.1.5
+120 silly idealTree ├── expand-range@1.8.2
+120 silly idealTree ├─┬ express-session@1.0.4
+120 silly idealTree │ ├── cookie@0.1.2
+120 silly idealTree │ └── debug@0.8.1
+120 silly idealTree ├─┬ express@4.2.0
+120 silly idealTree │ ├── cookie@0.1.2
+120 silly idealTree │ └── debug@0.8.1
+120 silly idealTree ├── extglob@0.3.2
+120 silly idealTree ├── filename-regex@2.0.0
+120 silly idealTree ├── fill-range@2.2.3
+120 silly idealTree ├── for-in@0.1.5
+120 silly idealTree ├── for-own@0.1.4
+120 silly idealTree ├── fresh@0.2.2
+120 silly idealTree ├── from@0.1.3
+120 silly idealTree ├── fullcalendar@2.9.0
+120 silly idealTree ├── glob-base@0.3.0
+120 silly idealTree ├── glob-parent@2.0.0
+120 silly idealTree ├── got@3.3.1
+120 silly idealTree ├── graceful-fs@4.1.4
+120 silly idealTree ├── has-ansi@2.0.0
+120 silly idealTree ├── hooks@0.2.1
+120 silly idealTree ├── ignore-by-default@1.0.1
+120 silly idealTree ├── imurmurhash@0.1.4
+120 silly idealTree ├── infinity-agent@2.0.3
+120 silly idealTree ├── inherits@2.0.1
+120 silly idealTree ├── ini@1.3.4
+120 silly idealTree ├── is-binary-path@1.0.1
+120 silly idealTree ├── is-buffer@1.1.3
+120 silly idealTree ├── is-dotfile@1.0.2
+120 silly idealTree ├── is-equal-shallow@0.1.3
+120 silly idealTree ├── is-extendable@0.1.1
+120 silly idealTree ├── is-extglob@1.0.0
+120 silly idealTree ├── is-finite@1.0.1
+120 silly idealTree ├── is-glob@2.0.1
+120 silly idealTree ├── is-npm@1.0.0
+120 silly idealTree ├── is-number@2.1.0
+120 silly idealTree ├── is-posix-bracket@0.1.1
+120 silly idealTree ├── is-primitive@2.0.0
+120 silly idealTree ├── is-promise@1.0.1
+120 silly idealTree ├── is-redirect@1.0.0
+120 silly idealTree ├── is-stream@1.1.0
+120 silly idealTree ├── isarray@1.0.0
+120 silly idealTree ├── isobject@2.1.0
+120 silly idealTree ├── jade@1.3.1
+120 silly idealTree ├── jquery@3.1.0
+120 silly idealTree ├── kerberos@0.0.11
+120 silly idealTree ├── kind-of@3.0.3
+120 silly idealTree ├── latest-version@1.0.1
+120 silly idealTree ├── lodash._baseassign@3.2.0
+120 silly idealTree ├── lodash._basecopy@3.0.1
+120 silly idealTree ├── lodash._bindcallback@3.0.1
+120 silly idealTree ├── lodash._createassigner@3.1.1
+120 silly idealTree ├── lodash._getnative@3.9.1
+120 silly idealTree ├── lodash._isiterateecall@3.0.9
+120 silly idealTree ├── lodash.assign@3.2.0
+120 silly idealTree ├── lodash.defaults@3.1.2
+120 silly idealTree ├── lodash.isarguments@3.0.8
+120 silly idealTree ├── lodash.isarray@3.0.4
+120 silly idealTree ├── lodash.keys@3.1.2
+120 silly idealTree ├── lodash.restparam@3.6.1
+120 silly idealTree ├── lowercase-keys@1.0.0
+120 silly idealTree ├── map-stream@0.1.0
+120 silly idealTree ├── media-typer@0.3.0
+120 silly idealTree ├── merge-descriptors@0.0.2
+120 silly idealTree ├── methods@1.0.0
+120 silly idealTree ├── micromatch@2.3.10
+120 silly idealTree ├── mime-db@1.23.0
+120 silly idealTree ├── mime-types@2.1.11
+120 silly idealTree ├── mime@1.2.11
+120 silly idealTree ├── minimatch@3.0.2
+120 silly idealTree ├── minimist@0.0.8
+120 silly idealTree ├── mkdirp@0.3.5
+120 silly idealTree ├── moment@2.14.1
+120 silly idealTree ├── mongodb@1.4.38
+120 silly idealTree ├── mongoose@3.8.40
+120 silly idealTree ├── monocle@1.1.51
+120 silly idealTree ├─┬ morgan@1.0.1
+120 silly idealTree │ └── bytes@0.3.0
+120 silly idealTree ├── mpath@0.1.1
+120 silly idealTree ├── mpromise@0.4.3
+120 silly idealTree ├─┬ mquery@1.10.0
+120 silly idealTree │ ├── debug@2.2.0
+120 silly idealTree │ └── ms@0.7.1
+120 silly idealTree ├── ms@0.1.0
+120 silly idealTree ├─┬ multer@1.1.0
+120 silly idealTree │ ├── mkdirp@0.5.1
+120 silly idealTree │ └── type-is@1.6.13
+120 silly idealTree ├── muri@1.1.0
+120 silly idealTree ├── nan@1.8.4
+120 silly idealTree ├── negotiator@0.4.9
+120 silly idealTree ├── nested-error-stacks@1.0.2
+120 silly idealTree ├─┬ nodemon@1.9.2
+120 silly idealTree │ ├── debug@2.2.0
+120 silly idealTree │ └── ms@0.7.1
+120 silly idealTree ├── nopt@1.0.10
+120 silly idealTree ├── normalize-path@2.0.1
+120 silly idealTree ├── number-is-nan@1.0.0
+120 silly idealTree ├── object-assign@3.0.0
+120 silly idealTree ├── object.omit@2.0.0
+120 silly idealTree ├── on-finished@2.3.0
+120 silly idealTree ├── once@1.3.3
+120 silly idealTree ├── optimist@0.3.7
+120 silly idealTree ├── os-homedir@1.0.1
+120 silly idealTree ├── os-tmpdir@1.0.1
+120 silly idealTree ├── osenv@0.1.3
+120 silly idealTree ├── package-json@1.2.0
+120 silly idealTree ├── parse-glob@3.0.4
+120 silly idealTree ├── parseurl@1.0.1
+120 silly idealTree ├── passport-local@1.0.0
+120 silly idealTree ├── passport-strategy@1.0.0
+120 silly idealTree ├── passport@0.2.2
+120 silly idealTree ├── path-is-absolute@1.0.0
+120 silly idealTree ├── path-to-regexp@0.1.2
+120 silly idealTree ├── pause-stream@0.0.11
+120 silly idealTree ├── pause@0.0.1
+120 silly idealTree ├─┬ pdf-fill-form@1.1.0
+120 silly idealTree │ └── nan@1.7.0
+120 silly idealTree ├── pinkie-promise@2.0.1
+120 silly idealTree ├── pinkie@2.0.4
+120 silly idealTree ├── prepend-http@1.0.4
+120 silly idealTree ├── preserve@0.2.0
+120 silly idealTree ├── process-nextick-args@1.0.7
+120 silly idealTree ├── promise@2.0.0
+120 silly idealTree ├── ps-tree@1.1.0
+120 silly idealTree ├── qs@0.6.6
+120 silly idealTree ├── randomatic@1.1.5
+120 silly idealTree ├── range-parser@1.0.0
+120 silly idealTree ├── raw-body@1.1.7
+120 silly idealTree ├─┬ rc@1.1.6
+120 silly idealTree │ └── minimist@1.2.0
+120 silly idealTree ├── read-all-stream@3.1.0
+120 silly idealTree ├── readable-stream@2.1.4
+120 silly idealTree ├── readdirp@0.2.5
+120 silly idealTree ├── regex-cache@0.4.3
+120 silly idealTree ├── regexp-clone@0.0.1
+120 silly idealTree ├── registry-url@3.1.0
+120 silly idealTree ├── repeat-element@1.1.2
+120 silly idealTree ├── repeat-string@1.5.4
+120 silly idealTree ├── repeating@1.1.3
+120 silly idealTree ├── semver-diff@2.1.0
+120 silly idealTree ├── semver@5.2.0
+120 silly idealTree ├─┬ send@0.3.0
+120 silly idealTree │ └── debug@0.8.0
+120 silly idealTree ├── serve-static@1.1.0
+120 silly idealTree ├── set-immediate-shim@1.0.1
+120 silly idealTree ├── sliced@0.0.5
+120 silly idealTree ├── slide@1.1.6
+120 silly idealTree ├── source-map@0.1.34
+120 silly idealTree ├── split@0.3.3
+120 silly idealTree ├── static-favicon@1.0.2
+120 silly idealTree ├── stream-combiner@0.0.4
+120 silly idealTree ├── streamsearch@0.1.2
+120 silly idealTree ├── string-length@1.0.1
+120 silly idealTree ├── string_decoder@0.10.31
+120 silly idealTree ├── strip-ansi@3.0.1
+120 silly idealTree ├── strip-json-comments@1.0.4
+120 silly idealTree ├── supports-color@2.0.0
+120 silly idealTree ├── through@2.3.8
+120 silly idealTree ├── timed-out@2.0.0
+120 silly idealTree ├── touch@1.0.0
+120 silly idealTree ├─┬ transformers@2.1.0
+120 silly idealTree │ └── uglify-js@2.2.5
+120 silly idealTree ├── type-is@1.1.0
+120 silly idealTree ├── typedarray@0.0.6
+120 silly idealTree ├── uglify-js@2.4.24
+120 silly idealTree ├── uglify-to-browserify@1.0.2
+120 silly idealTree ├── uid2@0.0.3
+120 silly idealTree ├── undefsafe@0.0.3
+120 silly idealTree ├── update-notifier@0.5.0
+120 silly idealTree ├── util-deprecate@1.0.2
+120 silly idealTree ├── utils-merge@1.0.0
+120 silly idealTree ├── uuid@2.0.2
+120 silly idealTree ├── window-size@0.1.0
+120 silly idealTree ├── with@3.0.1
+120 silly idealTree ├── wordwrap@0.0.2
+120 silly idealTree ├── wrappy@1.0.2
+120 silly idealTree ├── write-file-atomic@1.1.4
+120 silly idealTree ├── xdg-basedir@2.0.0
+120 silly idealTree ├── xtend@4.0.1
+120 silly idealTree └── yargs@3.5.4
+121 silly generateActionsToTake Starting
+122 silly install generateActionsToTake
+123 silly generateActionsToTake Finishing
+124 silly diffTrees action count 2
+125 silly diffTrees add nan@1.7.0
+126 silly diffTrees add pdf-fill-form@1.1.0
+127 silly decomposeActions action count 16
+128 silly decomposeActions fetch nan@1.7.0
+129 silly decomposeActions extract nan@1.7.0
+130 silly decomposeActions test nan@1.7.0
+131 silly decomposeActions preinstall nan@1.7.0
+132 silly decomposeActions build nan@1.7.0
+133 silly decomposeActions install nan@1.7.0
+134 silly decomposeActions postinstall nan@1.7.0
+135 silly decomposeActions finalize nan@1.7.0
+136 silly decomposeActions fetch pdf-fill-form@1.1.0
+137 silly decomposeActions extract pdf-fill-form@1.1.0
+138 silly decomposeActions test pdf-fill-form@1.1.0
+139 silly decomposeActions preinstall pdf-fill-form@1.1.0
+140 silly decomposeActions build pdf-fill-form@1.1.0
+141 silly decomposeActions install pdf-fill-form@1.1.0
+142 silly decomposeActions postinstall pdf-fill-form@1.1.0
+143 silly decomposeActions finalize pdf-fill-form@1.1.0
+144 silly executeActions Starting
+145 silly install executeActions
+146 silly doSerial global-install 0
+147 silly doParallel fetch 2
+148 verbose correctMkdir /home/maciej/.npm/_locks correctMkdir not in flight; initializing
+149 verbose lock using /home/maciej/.npm/_locks/staging-795f819ef2431351.lock for /home/maciej/docroute/node_modules/.staging
+150 silly doParallel extract 2
+151 silly extract nan@1.7.0
+152 silly extract pdf-fill-form@1.1.0
+153 verbose unbuild node_modules/.staging/nan-6f5b62a4
+154 verbose unbuild node_modules/.staging/pdf-fill-form-b57fc67e
+155 silly gentlyRm /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4 is being purged from base /home/maciej/docroute
+156 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4
+157 silly gentlyRm /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e is being purged from base /home/maciej/docroute
+158 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e
+159 verbose tar unpack /home/maciej/.npm/nan/1.7.0/package.tgz
+160 verbose tar unpacking to /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4
+161 silly gentlyRm /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4 is being purged
+162 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4
+163 verbose tar unpack /home/maciej/.npm/pdf-fill-form/1.1.0/package.tgz
+164 verbose tar unpacking to /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e
+165 silly gentlyRm /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e is being purged
+166 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e
+167 silly gunzTarPerm modes [ '755', '644' ]
+168 silly gunzTarPerm modes [ '755', '644' ]
+169 silly gunzTarPerm extractEntry package.json
+170 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+171 silly gunzTarPerm extractEntry package.json
+172 silly gunzTarPerm extractEntry include_dirs.js
+173 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+174 silly gunzTarPerm extractEntry LICENSE.md
+175 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+176 silly gunzTarPerm extractEntry .npmignore
+177 silly gunzTarPerm extractEntry README.md
+178 silly gunzTarPerm extractEntry LICENSE
+179 silly gunzTarPerm extractEntry example.js
+180 silly gunzTarPerm extractEntry .dntrc
+181 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+182 silly gunzTarPerm extractEntry appveyor.yml
+183 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+184 silly gunzTarPerm extractEntry binding.gyp
+185 silly gunzTarPerm extractEntry lib/pdf-fill-form.js
+186 silly gunzTarPerm extractEntry nan.h
+187 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+188 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+189 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+190 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+191 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+192 silly gunzTarPerm extractEntry nan_new.h
+193 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+194 silly gunzTarPerm extractEntry nan_string_bytes.h
+195 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+196 silly gunzTarPerm extractEntry CHANGELOG.md
+197 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+198 silly gunzTarPerm extractEntry src/NodePoppler.cc
+199 silly gunzTarPerm extractEntry src/NodePoppler.h
+200 silly gunzTarPerm extractEntry src/NodePopplerAsync.cc
+201 silly gunzTarPerm extractEntry src/NodePopplerAsync.h
+202 silly gunzTarPerm extractEntry src/pdf-fill-form.cc
+203 silly gentlyRm /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e/node_modules is being purged
+204 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e/node_modules
+205 silly gentlyRm /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4/node_modules is being purged
+206 verbose gentlyRm don't care about contents; nuking /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4/node_modules
+207 silly doParallel preinstall 2
+208 silly preinstall nan@1.7.0 /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4
+209 info lifecycle nan@1.7.0~preinstall: nan@1.7.0
+210 silly preinstall pdf-fill-form@1.1.0 /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e
+211 info lifecycle pdf-fill-form@1.1.0~preinstall: pdf-fill-form@1.1.0
+212 silly lifecycle nan@1.7.0~preinstall: no script for preinstall, continuing
+213 silly lifecycle pdf-fill-form@1.1.0~preinstall: no script for preinstall, continuing
+214 silly doReverseSerial remove 0
+215 silly doSerial move 0
+216 silly doSerial finalize 2
+217 silly finalize /home/maciej/docroute/node_modules/pdf-fill-form/node_modules/nan
+218 silly finalize /home/maciej/docroute/node_modules/pdf-fill-form
+219 silly doSerial build 2
+220 silly build nan@1.7.0
+221 info linkStuff nan@1.7.0
+222 silly linkStuff nan@1.7.0 has /home/maciej/docroute/node_modules/pdf-fill-form/node_modules as its parent node_modules
+223 verbose linkBins nan@1.7.0
+224 verbose linkMans nan@1.7.0
+225 silly build pdf-fill-form@1.1.0
+226 info linkStuff pdf-fill-form@1.1.0
+227 silly linkStuff pdf-fill-form@1.1.0 has /home/maciej/docroute/node_modules as its parent node_modules
+228 verbose linkBins pdf-fill-form@1.1.0
+229 verbose linkMans pdf-fill-form@1.1.0
+230 silly doSerial global-link 0
+231 silly doParallel update-linked 0
+232 silly doSerial install 2
+233 silly install nan@1.7.0 /home/maciej/docroute/node_modules/.staging/nan-6f5b62a4
+234 info lifecycle nan@1.7.0~install: nan@1.7.0
+235 silly lifecycle nan@1.7.0~install: no script for install, continuing
+236 silly install pdf-fill-form@1.1.0 /home/maciej/docroute/node_modules/.staging/pdf-fill-form-b57fc67e
+237 info lifecycle pdf-fill-form@1.1.0~install: pdf-fill-form@1.1.0
+238 verbose lifecycle pdf-fill-form@1.1.0~install: unsafe-perm in lifecycle false
+239 verbose lifecycle pdf-fill-form@1.1.0~install: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/maciej/docroute/node_modules/pdf-fill-form/node_modules/.bin:/home/maciej/docroute/node_modules/.bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+240 verbose lifecycle pdf-fill-form@1.1.0~install: CWD: /home/maciej/docroute/node_modules/pdf-fill-form
+241 silly lifecycle pdf-fill-form@1.1.0~install: Args: [ '-c', 'node-gyp rebuild' ]
+242 silly lifecycle pdf-fill-form@1.1.0~install: Returned: code: 1  signal: null
+243 info lifecycle pdf-fill-form@1.1.0~install: Failed to exec install script
+244 verbose unlock done using /home/maciej/.npm/_locks/staging-795f819ef2431351.lock for /home/maciej/docroute/node_modules/.staging
+245 silly rollbackFailedOptional Starting
+246 silly rollbackFailedOptional Finishing
+247 silly runTopLevelLifecycles Starting
+248 silly runTopLevelLifecycles Finishing
+249 silly install printInstalled
+250 warn optional Skipping failed optional dependency /chokidar/fsevents:
+251 warn notsup Not compatible with your operating system or architecture: fsevents@1.0.14
+252 verbose stack Error: pdf-fill-form@1.1.0 install: `node-gyp rebuild`
+252 verbose stack Exit status 1
+252 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
+252 verbose stack     at EventEmitter.emit (events.js:98:17)
+252 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+252 verbose stack     at ChildProcess.EventEmitter.emit (events.js:98:17)
+252 verbose stack     at maybeClose (child_process.js:743:16)
+252 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:810:5)
+253 verbose pkgid pdf-fill-form@1.1.0
+254 verbose cwd /home/maciej/docroute
+255 error Linux 3.19.0-64-generic
+256 error argv "node" "/usr/local/bin/npm" "install" "pdf-fill-form"
+257 error node v0.10.25
+258 error npm  v3.10.2
+259 error code ELIFECYCLE
+260 error pdf-fill-form@1.1.0 install: `node-gyp rebuild`
+260 error Exit status 1
+261 error Failed at the pdf-fill-form@1.1.0 install script 'node-gyp rebuild'.
+261 error Make sure you have the latest version of node.js and npm installed.
+261 error If you do, this is most likely a problem with the pdf-fill-form package,
+261 error not with npm itself.
+261 error Tell the author that this fails on your system:
+261 error     node-gyp rebuild
+261 error You can get information on how to open an issue for this project with:
+261 error     npm bugs pdf-fill-form
+261 error Or if that isn't available, you can get their info via:
+261 error     npm owner ls pdf-fill-form
+261 error There is likely additional logging output above.
+262 verbose exit [ 1, true ]

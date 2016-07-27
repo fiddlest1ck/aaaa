@@ -97,6 +97,15 @@ li.list{
     background:#ccc;
     margin:0;
 }
+
+.message-text {
+    background: white;
+    border: gainsboro;
+    margin: 20px;
+    min-height: 200px;
+    border-style: double;
+}
+
 li{
     margin:0;
 }

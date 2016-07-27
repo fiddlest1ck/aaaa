@@ -1,14 +1,15 @@
 extends layout
 
 block content
-		form(method='POST' action='/home/sender/file' enctype="multipart/form-data")
-			input(type='file' name='file')
-			input(type='submit')
-			ul.user-details
-				h2 Userzy
-				each user in users
-					ul
-						li: input(type='checkbox', name='user', value='#{user.username}' ) 
-						p #{user.lastName} #{user.firstName}
-	
-	
+	div.row
+		div.col-md-2
+			form(method='POST' class='form-horizontal' action='/home/sender/file' enctype="multipart/form-data")
+				input(type='file' class='form-control' name='file')
+				input(type='submit')
+				ul.user-details
+					h2 Userzy
+					each user in users
+						ul
+							li: input(name='user' type='checkbox' value='#{user.username}' label='#{user.username}')
+						ul
+							li: p #{user.username}

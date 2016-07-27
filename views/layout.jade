@@ -1,14 +1,19 @@
 doctype html
-html
+html(ng-init)
 	head
 		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+		link(rel='stylesheet' href='/stylesheets/style.css')
+		link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css")
 		link(href='/bower_components/fullcalendar.css' rel='stylesheet')
 		script(src='/bower_components/lib/moment.min.js')
 		script(src='/bower_components/lib/jquery.min.js')
 		script(src='/bower_components/fullcalendar.js')
 		script(src='/bower_components/fullcalendar/pl.js')
+		script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js")
+		
+
 	body
 		div.col-md-12.top
 				a(href='/signout') logout

@@ -5,11 +5,18 @@ block content
 		div.col-sm-6.col-md-4.col-md-offset-4
 			div.singup-wall
 				form(action='/home/openbox/reply/' method='POST')
-					input(type='text' name='name' value='Od #{member.firstName} #{member.lastName} | ' )
+					input(type='text' name='name' value='Od #{member.firstName} #{member.lastName} | ' readonly)
 					textarea(cols='50' rows='4' name='text')
 
 					div
 					each user in users
 						input(type='radio' name='user' value='#{user.username}' required)
 						p #{user.username}
+					p reply with available file
+					each file in files
+						input(type='radio' name='file' value='#{file._id}' )
+						p #{file.filename}
+					p reply with add
+						input(type='file' name='upload')
+
 					input(type='submit')

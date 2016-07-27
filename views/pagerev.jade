@@ -6,7 +6,7 @@ block content
 			div.col-sm-6.col-md-4.col-md-offset-4
 				#user
 					h1.text-center.login-title 
-						div.signup-wall
+						div
 							
 							- if(typeof(locals.file.text) == 'undefined') {
 							p= 'Filename:' + locals.file.filename
@@ -14,10 +14,13 @@ block content
 					a(href='/home/openbox/download/' + file.filename) download			
 							- }
 							- else {
-							p= 'Subject:' + locals.file.filename
-							p= locals.file.text 
-					a(type='button' href='/home/openbox/reply/') reply
-					a(href='/home/openbox/download/' + file.filename) download			
+							div(class='message-form')
+								div(class='message-subject')
+									p= 'Subject:' + locals.file.filename
+								div(class='message-text')
+									p= locals.file.text 
+				a(type='button' href='/home/openbox/reply/') reply
+				a(href='/home/openbox/download/' + file.filename) download			
 							-}
 							
 					
